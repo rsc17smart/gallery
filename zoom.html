@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple JS Gallery</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="entry-content">
+
+            <h1 class="gallery-title">Simple Zoom Gallery Slider</h1>
+            <div class="gallery" id="gallery-3">
+                <div class="item">
+                    <img src="images/img-03.jpg" alt="image">
+                </div>
+                <div class="item">
+                    <img src="images/img-05.jpg" alt="image">
+                </div>
+                <div class="item">
+                    <img src="images/img-01.jpg" alt="image">
+                </div>
+                <div class="item">
+                    <img src="images/img-02.jpg" alt="image">
+                </div>
+                <div class="item">
+                    <img src="images/img-04.jpg" alt="image">
+                </div>
+            </div>
+
+            <hr>
+
+            <nav class="bottom-navigation">
+                <ul>
+                    <li><a href="index.html">Slide</a></li>
+                    <li><a href="fade.html">Fade</a></li>
+                    <li class="current-page"><a href="zoom.html">Zoom</a></li>
+                    <li><a href="autoplay.html">Autoplay</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+
+    <script>
+        // Gallery zoom
+        const gallery3 = new OTO.Gallery(document.getElementById('gallery-3'), {
+            // Options
+            effect: 'zoom',
+        });
+
+        gallery3.generate();
+    </script>
+</body>
+</html>
