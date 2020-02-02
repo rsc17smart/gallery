@@ -21,7 +21,7 @@ OTO.Gallery = class {
         const slides = this.slides;
         const slidesLength = this.slides.length;
         const slidesHeight = [];
-        
+
         // Add the list of slides into the container element
         const gallery = document.createElement('div');
         gallery.classList.add('oto-gallery-track');
@@ -51,7 +51,7 @@ OTO.Gallery = class {
         gallery.style.height = `${galleryHeight}px`;
 
         this.container.appendChild(gallery);
-        
+
         // Sanitize old structure ?? Is it ok to use another loop for sanitize or should I use the loop already used above?
         for (let i = 0; i < slidesLength; i++) {
             slides[0].parentNode.removeChild(slides[0]);
